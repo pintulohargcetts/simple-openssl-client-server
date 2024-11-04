@@ -1,4 +1,4 @@
-# simple-openssl-client-server
+## simple-openssl-client-server
 simple-openssl-client-server
 
 # generate your own certificate using following 
@@ -17,4 +17,15 @@ gcc openssl_tcp_client.c -o openssl_tcp_client -lssl -lcrypto
 # start client
 ```bash
 ./openssl_tcp_client
+```
+
+
+## simple dtls server for test 
+# run server 
+```bash
+gcc dtls_server.c -o dtls_server -lssl -lcrypto
+```
+# test with openssl 
+```bash
+openssl s_client -dtls -connect 127.0.0.1:4445 
 ```
